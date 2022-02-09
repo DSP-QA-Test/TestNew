@@ -8,8 +8,8 @@ def create_argument_parser():
     return parser
 
 def generate_file(filename, filesize):
-	filename = 'name'
-	filesize = 128
+    filename = 'name'
+    filesize = 128
     command = 'head -c {0} < /dev/urandom > {1}'.format(filesize, filename)
 
     print('Generating new random file with:')
