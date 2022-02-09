@@ -1,15 +1,6 @@
-import argparse
 import os
 
-def create_argument_parser():
-    parser = argparse.ArgumentParser(description = 'GenerateFile creates a random file of a given size')
-    parser.add_argument('--filename', nargs = '?', required = False, help = 'The name of the file to create')
-    parser.add_argument('--filesize', nargs = '?', required = False, help = 'The size of the file to create in bytes.', type = int)
-    return parser
-
 def generate_file(filename, filesize):
-    filename = 'name'
-    filesize = 128
     command = 'head -c {0} < /dev/urandom > {1}'.format(filesize, filename)
 
     print('Generating new random file with:')
@@ -18,6 +9,4 @@ def generate_file(filename, filesize):
     os.system(command)
 
 if __name__ == "__main__":
-    parser = create_argument_parser()
-    args = parser.parse_args()
-    generate_file(args.filename, args.filesize)
+    generate_file('name', 128)
