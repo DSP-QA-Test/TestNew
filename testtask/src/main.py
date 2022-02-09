@@ -9,4 +9,5 @@ def generate_file(filename, filesize):
     os.system(command)
 
 if __name__ == "__main__":
-    generate_file('name', 128)
+    generate_file('/storage/file', 128)
+	
